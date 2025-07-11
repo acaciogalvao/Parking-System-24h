@@ -5,6 +5,7 @@ import "./App.css";
 import QuickEntry from "./components/QuickEntry";
 import QuickExit from "./components/QuickExit";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
+import NetworkStatus from "./components/NetworkStatus";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
