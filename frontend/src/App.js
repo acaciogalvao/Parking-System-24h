@@ -932,6 +932,7 @@ function App() {
           <Route path="/sessions" element={<Sessions />} />
           <Route path="/transactions" element={<Transactions />} />
         </Routes>
+        <PWAInstallPrompt />
       </BrowserRouter>
     </div>
   );
