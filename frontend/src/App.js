@@ -4,6 +4,7 @@ import axios from "axios";
 import "./App.css";
 import QuickEntry from "./components/QuickEntry";
 import QuickExit from "./components/QuickExit";
+import PWAInstallPrompt from "./components/PWAInstallPrompt";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
