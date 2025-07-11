@@ -98,7 +98,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-xl font-semibold mb-4">Receita Diária</h3>
           <p className="text-2xl font-bold text-green-600">R$ {stats?.daily_revenue?.toFixed(2) || '0.00'}</p>
@@ -107,6 +107,17 @@ const Dashboard = () => {
           <h3 className="text-xl font-semibold mb-4">Receita Mensal</h3>
           <p className="text-2xl font-bold text-green-600">R$ {stats?.monthly_revenue?.toFixed(2) || '0.00'}</p>
         </div>
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h3 className="text-xl font-semibold mb-4">Ocupação</h3>
+          <p className="text-2xl font-bold text-blue-600">
+            {stats?.total_spots > 0 ? Math.round((stats.occupied_spots / stats.total_spots) * 100) : 0}%
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <QuickEntry />
+        <QuickExit />
       </div>
     </div>
   );
